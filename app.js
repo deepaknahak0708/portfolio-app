@@ -13,6 +13,11 @@ app.use(express.urlencoded({ extended: false }))
 app.use(express.static(path.join(__dirname,'public')))
 const flash = require('connect-flash')
 
+
+
+app.set('view engine','ejs')
+app.use(flash())
+
 app.use(
     session({
       secret: process.env.SECRET_KEY,
@@ -24,8 +29,6 @@ app.use(
     })
   );
 
-app.set('view engine','ejs')
-app.use(flash())
 app.use(router)
 
 app.listen(port, () => {

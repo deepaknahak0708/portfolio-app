@@ -32,6 +32,7 @@ exports.addUser = async (req, res) => {
       });
 
       return req.flash('success','Successfull Detail Upload')
+      // return req.flash('success','Successfull Detail Upload')
     } catch (error) {
         return req.flash('error','Detail Incorrect')
     }
