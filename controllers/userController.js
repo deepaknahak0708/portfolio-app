@@ -31,9 +31,10 @@ exports.addUser = async (req, res) => {
         html: `<p>${newUser}</p>`, // html body
       });
 
-      return req.flash('success','Successfull Detail Upload')
+      req.flash('success','Your details sent successfully to deepak mail')
+      return res.redirect('/')
       // return req.flash('success','Successfull Detail Upload')
     } catch (error) {
-        return req.flash('error','Detail Incorrect')
+        return req.flash('error','Detail Not Sent')
     }
   };

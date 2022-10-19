@@ -1,4 +1,36 @@
-<% if(success.length){ %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .alert-success{
+      font-size: 18px;
+      padding: 15px;
+      border-radius: 15px;
+      font-weight: bold;
+      margin-top: 9px;
+      color: white;
+      background-color: rgba(72, 168, 72, 0.678);
+      width: 100%;
+    }
+
+    .alert-danger{
+      font-size: 18px;
+      padding: 15px;
+      border-radius: 15px;
+      font-weight: bold;
+      margin-top: 9px;
+      color: white;
+      background-color: rgba(168, 72, 72, 0.678);
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <% if(success.length){ %>
       
     <div class="alert alert-success alert-dismissible fade show" role="alert">
        <%=success%>
@@ -17,3 +49,6 @@
     </button>
   </div>
 <% }%>
+
+</body>
+</html>
