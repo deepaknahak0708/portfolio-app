@@ -22,6 +22,7 @@ exports.addUser = async (req, res) => {
           pass: process.env.APP_PW, // generated ethereal password
         },
       });
+      
 
       let info = await transporter.sendMail({
         from: req.body.email, // sender address
